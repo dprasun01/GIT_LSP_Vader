@@ -51,7 +51,8 @@ public class WordCounting {
 			            }
 			    	}
 
-		    		else {Counter.put(currword, Counter.getOrDefault(currword, 0) + 1);
+		    		else {
+		    			Counter.put(currword, Counter.getOrDefault(currword, 0) + 1);
 		    		}
 		    	}
 		    		
