@@ -12,7 +12,7 @@ public class WordCounting {
 
 	public static void main(String[] args) {
 		
-		String filepath = "LSP_Projects_Assignments_Spring2024/src/org/howard/edu/lsp/assignment2/words.txt";
+		String filepath = "src/org/howard/edu/lsp/assignment2/words.txt";
 		
 		String cwd = System.getProperty("user.dir");
 		Path file = Paths.get(cwd, filepath);
