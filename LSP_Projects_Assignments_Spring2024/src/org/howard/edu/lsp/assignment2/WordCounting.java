@@ -36,7 +36,7 @@ public class WordCounting {
 
 		    	String currword = scanner.next().toLowerCase();
 		    	char firstchar = currword.charAt(0);
-		    	if (currword.length() > 3 && Character.isLetter(firstchar)) {
+		    	if (currword.length() > 3) {
 
 		    		Counter.put(currword, Counter.getOrDefault(currword, 0) + 1);
 		    	}
