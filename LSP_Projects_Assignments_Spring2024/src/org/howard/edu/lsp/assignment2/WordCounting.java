@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.util.Map;
 import java.util.LinkedHashMap;
 
+
 public class WordCounting {
 
 	public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class WordCounting {
 
 		    	String currword = scanner.next().toLowerCase();
 		    	char firstchar = currword.charAt(0);
-		    	if (currword.length() > 3) {
+		    	if (currword.length() > 3 && Character.isLetter(firstchar)) {
 
 		    		Counter.put(currword, Counter.getOrDefault(currword, 0) + 1);
 		    	}
@@ -61,6 +62,10 @@ public class WordCounting {
 			e.printStackTrace();
 		}
 
+	}
+	
+	private static boolean isAlpha(String str) {
+		return str.matches("[a-zA-Z]");
 	}
 
 } 
