@@ -90,4 +90,4 @@ public class WordCounting {
 		return str.matches(".*[^a-zA-Z0-9'].*");
 	}
 
-} 
+}
