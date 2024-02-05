@@ -26,6 +26,8 @@ public class WordCounting {
             e.printStackTrace();
         }
 		
+		System.out.println();
+		System.out.println();
 		
 		try {
 		  
@@ -39,23 +41,23 @@ public class WordCounting {
 //		    	char firstchar = currword.charAt(0);
 
 		    	
-		    	if (currword.length() > 3 && !isNumeric(currword) && isAlpha(currword)) {
+		    	if (currword.length() > 3 && !isNumeric(currword)) {
 		    		
-		    		if (currword.contains("'") ) {
+		    		if (currword.contains("'")) {
 			    		String[] words = currword.split("'");
 			    		
 			    		for (String string : words) {
-			                if (string.length() > 3) {
+			                if (string.length() > 3 && !isNumeric(string) && !isInvalid(string)) {
 			                	Counter.put(string, Counter.getOrDefault(string, 0) + 1);
 			                }
 			            }
 			    	}
 
-		    		else {
+		    		else if (!isInvalid(currword)) {
 		    			Counter.put(currword, Counter.getOrDefault(currword, 0) + 1);
 		    		}
 		    	}
-		    		
+		    	
 		    }
 
 		    scanner.close();
@@ -80,12 +82,12 @@ public class WordCounting {
 	
 	private static boolean isNumeric(String str) {
 		
-		return str.matches("\\d");
+		return str.matches("-?\\d+(\\.\\d+)?");
 	}
 	
-	private static boolean isAlpha(String str) {
+	private static boolean isInvalid(String str) {
 		
-		return str.matches("[a-zA-Z]+");
+		return str.matches(".*[^a-zA-Z0-9'].*");
 	}
 
 } 
