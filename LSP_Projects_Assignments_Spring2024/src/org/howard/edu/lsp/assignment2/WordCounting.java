@@ -36,9 +36,10 @@ public class WordCounting {
 		    while (scanner.hasNext()) {
 
 		    	String currword = scanner.next().toLowerCase();
-		    	char firstchar = currword.charAt(0);
+//		    	char firstchar = currword.charAt(0);
+
 		    	
-		    	if (currword.length() > 3 && Character.isLetter(firstchar)) {
+		    	if (currword.length() > 3 && !isNumeric(currword) && isAlpha(currword)) {
 		    		
 		    		if (currword.contains("'") ) {
 			    		String[] words = currword.split("'");
@@ -74,6 +75,11 @@ public class WordCounting {
 			e.printStackTrace();
 		}
 
+	}
+	
+	private static boolean isNumeric(String str) {
+		
+		return str.matches("\\d");
 	}
 	
 	private static boolean isAlpha(String str) {
