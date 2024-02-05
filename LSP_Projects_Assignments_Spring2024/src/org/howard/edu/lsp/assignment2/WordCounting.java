@@ -37,9 +37,21 @@ public class WordCounting {
 
 		    	String currword = scanner.next().toLowerCase();
 		    	char firstchar = currword.charAt(0);
+		    	
 		    	if (currword.length() > 3 && Character.isLetter(firstchar)) {
+		    		
+		    		if (currword.contains("'") ) {
+			    		String[] words = currword.split("'");
+			    		
+			    		for (String string : words) {
+			                if (string.length() > 3) {
+			                	Counter.put(string, Counter.getOrDefault(string, 0) + 1);
+			                }
+			            }
+			    	}
 
-		    		Counter.put(currword, Counter.getOrDefault(currword, 0) + 1);
+		    		else {Counter.put(currword, Counter.getOrDefault(currword, 0) + 1);
+		    		}
 		    	}
 		    		
 		    }
@@ -65,7 +77,8 @@ public class WordCounting {
 	}
 	
 	private static boolean isAlpha(String str) {
-		return str.matches("[a-zA-Z]");
+		
+		return str.matches("[a-zA-Z]+");
 	}
 
 } 
