@@ -17,7 +17,7 @@ public class Driver {
 	public static void main(String[] args) throws IntegerSetException {
 		
 			// Test add and toString methods
-		    System.out.println("\nTest I: Testing the 'add' and 'toString' methods\n");
+		    System.out.println("\nTest I: Testing the add and toString methods\n");
 	        IntegerSet set1 = new IntegerSet();
 	        System.out.println("Set 1 before any value is added: " + set1.toString());
 	        set1.add(5);
@@ -43,7 +43,7 @@ public class Driver {
 		    System.out.println("Set 1 before clear: " + set1.toString());
 	        set1.clear();
 	        System.out.println("Set 1 after clear: " + set1.toString()); // Expected Result: []
-	        System.out.println("--------------------------------------------------------");
+	        System.out.println("------------------------------------------------------------------------");
 
 	        
 	        // Test length method
@@ -69,12 +69,15 @@ public class Driver {
 	        
 	        // Test contains method
 		    System.out.println("\nTest VI: Testing the contains method\n");
+		    set1.add(4);
+		    set1.add(7);
+		    set1.add(8);
 		    System.out.println("Current Set 1: " + set1.toString());
 		    System.out.println("Current Set 2: " + set2.toString());
 		    int val1 = 77;
 		    int val2 = 9;
-	        System.out.println("Set 1 contains " + val1 + "?" + set1.contains(val1)); // Expected Result: false
-	        System.out.println("Set 2 contains " + val2 + "?:" + set2.contains(val2)); // Expected Result: true
+	        System.out.println("Set 1 contains " + val1 + "?: " + set1.contains(val1)); // Expected Result: false
+	        System.out.println("Set 2 contains " + val2 + "?: " + set2.contains(val2)); // Expected Result: true
 	        System.out.println("------------------------------------------------------------------------");
 
 	        // Test largest method 
@@ -205,15 +208,15 @@ public class Driver {
 	        set2.add(6);
 	        set2.add(8);
 	        set2.add(0);
-		    System.out.println("\nTest XIII: Test complement method\n");
+		    System.out.println("\nTest XIII: Testing the complement method\n");
 	        set1.complement(set2);
 	        System.out.println("Complement of Set 1 using Set 2: " + set1.toString()); // Expected Result: [2, 4, 6, 8]
 	        System.out.println("------------------------------------------------------------------------");
 	        
 	        //Test isEmpty and Exception throw
-		    System.out.println("\nTest XIV: 'Testing Proper Exception throw\n");
+		    System.out.println("\nTest XIV: Testing isEmpty method and Proper Exception throw\n");
 	        IntegerSet setNull = new IntegerSet();
-	        System.out.println("An empty set (set 4): " + setNull);
+	        System.out.println("An empty set: " + setNull);
 	        System.out.println("Set empty?: " + setNull.isEmpty());
 	        System.out.println("Trying to find largest element in null set: " + setNull.smallest()); // Should throw exception
 	        
