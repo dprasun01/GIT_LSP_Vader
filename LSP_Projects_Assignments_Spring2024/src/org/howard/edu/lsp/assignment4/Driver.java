@@ -218,7 +218,7 @@ public class Driver {
 	        IntegerSet setNull = new IntegerSet();
 	        System.out.println("An empty set: " + setNull);
 	        System.out.println("Set empty?: " + setNull.isEmpty());
-	        System.out.println("Trying to find largest element in null set: " + setNull.smallest()); // Should throw exception
+	        System.out.println("Trying to find largest element in null set: " + setNull.largest()); // Should throw exception
 	        
 
 	}

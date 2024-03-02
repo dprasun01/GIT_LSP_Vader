@@ -228,7 +228,6 @@ public class IntegerSet {
 	 * Returns the string representation of the set.
 	 * @return the string representation of the set.
 	 */
-	@Override
 	public String toString() {
 		return this.set.toString();
 	}
