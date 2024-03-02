@@ -42,7 +42,7 @@ public class IntegerSet {
 	// Returns the length of the set
 	/**
      * Returns the number of elements in the IntegerSet.
-     * @return the length of the set
+     * @return length of the set
      */
 	public int length() {
 		return this.set.size();
@@ -52,7 +52,7 @@ public class IntegerSet {
      * Returns true if the 2 sets are equal, false otherwise;
      * Two sets are equal if they contain all of the same values in ANY order
      * Overrides the equal method from the Object class.
-     * @param another object o
+     * @param o The object to check against
      * @return True if the sets are equal, and false otherwise.
      */
 	@Override
@@ -79,7 +79,7 @@ public class IntegerSet {
 	/**
 	 * Returns whether or not a value is present in the set
 	 * Checks if the set has the provided value
-	 * @param an integer value to check for
+	 * @param value The value to check for
 	 * @return True if the value is in the set, false otherwise
 	 */
 	public boolean contains(int value) {
@@ -115,7 +115,7 @@ public class IntegerSet {
 	// Adds an item to the set or does nothing it already there
 	/**
 	 * Adds an element to the set if it's not there, otherwise does nothing
-	 * @param integer item to be added
+	 * @param item The integer item to be added
 	 */
 	public void add(int item) {
 		boolean adding = true;
@@ -133,7 +133,7 @@ public class IntegerSet {
 	// Removes an item from the set or does nothing if not there
 	/**
 	* Removes an element from the set if it's there, otherwise does nothing
-	* @param integer item to be removed
+	* @param item The integer item to be removed
 	*/
 	public void remove(int item) {
 		if (this.set != null) {
@@ -145,7 +145,7 @@ public class IntegerSet {
 	/**
 	 * Performs the union operation of two sets.
 	 * Adds all elements from the provided set to this set without repeating any.
-	 * @param intSetb, the set with which to perform a union.
+	 * @param intSetb The set with which to perform a union.
 	 */
 	public void union(IntegerSet intSetb) {
 				
@@ -182,7 +182,7 @@ public class IntegerSet {
 	/**
 	 * Finds the difference between two sets.
 	 * Removes elements from this set that are present in the other given set.
-	 * @param intSetb, the set with which to perform difference.
+	 * @param intSetb The set with which to perform difference.
 	 */
 	public void diff(IntegerSet intSetb) {
 		
@@ -199,7 +199,7 @@ public class IntegerSet {
 	/**
 	 * Finds the complement of this set based on the other given set.
 	 * Removes all elements from the other set that are present in this set.
-	 * @param intSetb, the set to find the complement with.
+	 * @param intSetb the set to find the complement with.
 	 */
 	public void complement(IntegerSet intSetb) {
 		
