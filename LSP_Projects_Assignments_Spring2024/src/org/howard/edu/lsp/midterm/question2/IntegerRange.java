@@ -48,7 +48,6 @@ public class IntegerRange implements Range {
      * 
      * @return string representation of the range in the format "[lower, upper]"
      */
-    @Override
     public String toString() {
         return "[" + this.lower + ", " + this.upper + "]";
     }
