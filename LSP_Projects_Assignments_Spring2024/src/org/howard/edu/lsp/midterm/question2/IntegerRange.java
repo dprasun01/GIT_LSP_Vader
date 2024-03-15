@@ -72,7 +72,11 @@ public class IntegerRange implements Range {
      */
     @Override
     public boolean overlaps(Range other) {
-        return (other.contains(lower) || other.contains(upper) || other.overlaps(this));
+        if (other.contains(lower) || other.contains(upper) || other.overlaps(this)) {
+            return true;
+        } else {
+            return false;
+        }
     }
     
     /**
