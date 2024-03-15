@@ -96,6 +96,10 @@ public class IntegerRange implements Range {
      * @return true if the ranges are equal, false otherwise
      */
     public boolean equals(Range other) {
-        return (other.contains(this.lower) && other.contains(this.upper) && other.size() == this.size());
+        if ((other.contains(this.lower) && other.contains(this.upper) && other.size() == this.size())) {
+        	return true;
+        } else {
+        	return false;
+        }
     }
 }
