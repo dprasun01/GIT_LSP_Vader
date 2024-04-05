@@ -281,7 +281,7 @@ public class IntegerSetTest {
 		// Implementing union of setA and setB
 		setA.union(setB);
 		
-		// Asserting the union of the sets to be [0, 1, 2, 4, 6, 7, 8, 9]
+		// Asserting the union of the sets
 		assertEquals(setA.toString(), "[0, 2, 4, 6, 8, 1, 7, 9]");
 		
 		// Another example where setB is a subset of setA
@@ -299,7 +299,7 @@ public class IntegerSetTest {
 		// Implementing union of setA and setB
 		setA.union(setB);
 				
-		// Asserting the union of the sets to be [0, 2, 4, 6, 8]
+		// Asserting the union of the sets
 		assertEquals(setA.toString(), "[0, 2, 4, 6, 8]");
 		
 	}
