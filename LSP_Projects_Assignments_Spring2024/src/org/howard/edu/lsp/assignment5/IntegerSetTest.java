@@ -252,7 +252,7 @@ public class IntegerSetTest {
         assertEquals(setB.smallest(), 0);
         
         // Removing 670 from setA
-        setA.remove(0);
+        setB.remove(0);
 		
         // Asserting 6 is the largest element
         assertEquals(setB.smallest(), 6);
@@ -282,9 +282,15 @@ public class IntegerSetTest {
 		setA.union(setB);
 		
 		// Asserting the union of the sets to be [0, 1, 2, 4, 6, 7, 8, 9]
-		assertEquals(setA.toString(), "[0, 1, 2, 4, 6, 7, 8, 9]");
+		assertEquals(setA.toString(), "[0, 2, 4, 6, 8, 1, 7, 9]");
 		
 		// Another example where setB is a subset of setA
+		setA.clear();
+		setA.add(0);
+		setA.add(2);
+		setA.add(4);
+		setA.add(6);
+		setA.add(8);
 		setB.clear();
 		setB.add(4);
 		setB.add(6);
@@ -322,7 +328,7 @@ public class IntegerSetTest {
 		setA.intersect(setB);
 		
 		// Asserting the intersection of the sets to be [0, 6]
-		assertEquals(setA.toString(), "[0, 6]");
+		assertEquals(setA.toString(), "[6, 0]");
 		
 		// Another example where setB is empty and setA is not
 		setB.clear();
@@ -356,7 +362,7 @@ public class IntegerSetTest {
 		setA.diff(setB);
 		
 		// Asserting the difference of the sets to be [2, 4, 8]
-		assertEquals(setA.toString(), "[2,4,8]");
+		assertEquals(setA.toString(), "[2, 4, 8]");
 		
 		// Another example where setB is empty and setA is not
 		setB.clear();
@@ -409,7 +415,7 @@ public class IntegerSetTest {
 		setB.complement(setA);
 		
 		// Asserting the complement of the sets to be [2, 4, 8]
-		assertEquals(setB.toString(), "[2,4,8]");
+		assertEquals(setB.toString(), "[2, 4, 8]");
 		
 		// Another example where setB is empty and setA is not
 		setB.clear();
