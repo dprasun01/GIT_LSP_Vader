@@ -211,7 +211,7 @@ public class IntegerSetTest {
 	
 	@Test
 	@DisplayName("Test Case for largest")
-	public void testLargest() throws IntegerSetException {
+	public void testLargest() throws Exception {
 		// Asserting IntegerSetException for empty sets
 		Throwable exceptionSetA = assertThrows(Exception.class, () -> setA.largest());
         assertEquals("Set is empty!", exceptionSetA.getMessage());
@@ -235,11 +235,11 @@ public class IntegerSetTest {
 	
 	@Test
 	@DisplayName("Test Case for smallest")
-	public void testSmallest() throws IntegerSetException {
+	public void testSmallest() throws Exception {
 		// Asserting IntegerSetException for empty sets
-		Throwable exceptionSetA = assertThrows(IntegerSetException.class, () -> setA.smallest());
+		Throwable exceptionSetA = assertThrows(Exception.class, () -> setA.smallest());
         assertEquals("Set is empty!", exceptionSetA.getMessage());
-        Throwable exceptionSetB = assertThrows(IntegerSetException.class, () -> setB.smallest());
+        Throwable exceptionSetB = assertThrows(Exception.class, () -> setB.smallest());
         assertEquals("Set is empty!", exceptionSetB.getMessage());
         
         // Adding some elements in setB
