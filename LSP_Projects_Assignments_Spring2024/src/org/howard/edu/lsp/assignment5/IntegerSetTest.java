@@ -321,7 +321,7 @@ public class IntegerSetTest {
 		// Implementing intersection of setA and setB
 		setA.intersect(setB);
 		
-		// Asserting the intersection of the sets to be [0, 1, 2, 4, 6, 7, 8, 9]
+		// Asserting the intersection of the sets to be [0, 6]
 		assertEquals(setA.toString(), "[0, 6]");
 		
 		// Another example where setB is empty and setA is not
@@ -364,7 +364,7 @@ public class IntegerSetTest {
 		// Implementing difference of setB and setA
 		setB.diff(setA);
 				
-		// Asserting the intersection of the sets to be []
+		// Asserting the difference of the sets to be []
 		assertEquals(setB.toString(), "[]");
 		
 		// Emptying setA and setB and adding other integers
@@ -380,7 +380,7 @@ public class IntegerSetTest {
 		setB.add(11111);
 		setB.add(111111);
 		
-		// Implementing intersection of setB and setA
+		// Implementing difference of setB and setA
 		setB.diff(setA);
 		
 		// Asserting the result
@@ -414,10 +414,10 @@ public class IntegerSetTest {
 		// Another example where setB is empty and setA is not
 		setB.clear();
 		
-		// Implementing difference of setB and setA
+		// Implementing complement of setB and setA
 		setA.complement(setB);
 				
-		// Asserting the intersection of the sets to be []
+		// Asserting the complement of the sets to be []
 		assertEquals(setA.toString(), "[]");
 		
 		// Emptying setA and setB and adding other integers
@@ -433,7 +433,7 @@ public class IntegerSetTest {
 		setB.add(11111);
 		setB.add(111111);
 		
-		// Implementing intersection of setB and setA
+		// Implementing complement of setB and setA
 		setA.complement(setB);
 		
 		// Asserting the result
